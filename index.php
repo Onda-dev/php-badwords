@@ -6,9 +6,9 @@ A domani :php: -->
 <?php
     $text = "Ciao pezzo di merda, come stai?";
 
-    $array_prova = explode(',', $text);
+    $bad_word = $_GET['merda'];
 
-    $censored_text = str_replace ('merda', '*****', $text);
+    $censored_text = str_replace ($bad_word, '***', $text);
 ?>
 
 <!DOCTYPE html>
