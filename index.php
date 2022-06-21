@@ -6,7 +6,10 @@ A domani :php: -->
 <?php
     $text = "Ciao pezzo di merda, come stai?";
 
-    $bad_word = $_GET['bad_word'];
+    $bad_word = false;
+    if(isset($_GET['bad_word'])){
+        $bad_word = $_GET['bad_word'];
+    }
 
     $censored_text = str_replace ($bad_word, '***', $text);
 ?>
